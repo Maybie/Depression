@@ -504,7 +504,7 @@ local library = {
 			return c
 		end
 		x, c = pcall(function()
-			return (game:IsLoaded() or (game.Loaded:Wait() or 1))
+			return (game:IsLoaded() or (game.Loaded:Wait() or 1)) and game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
 		end)
 		if x and c then
 			return c
